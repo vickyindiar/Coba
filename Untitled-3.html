@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akhmad Fauzi &amp; Atika</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Niconne|Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://atika.dan.akhmadfauzi.com/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<section class="section wedding-names" id="Home">
+		<div>
+			A | F
+		</div>
+	</section>
+	<section class="section wedding-details" id="Detail">
+		<p style="font-weight: bold;" >Assalamu 'Alaikum Wa Rahmatullahi Wa Barukatuh</p>
+		<p style="font-weight: bold;">Maha suci Allah yang telah menciptakan makhluknya berpasang-pasangan</p>
+		<p style="font-weight: bold;">Ya Allah perkenankanlah kami menikahkan putra putri kami</p>
+		<div class="brides-group" style="margin-top: 60px">
+			<p class="bride-names">Atika Dewi</p>
+			
+			<p class="bride-parents" style="font-weight: bold; font-size: 1em">Anak ke dua dari Bpk. Emri Andi &amp; Ibu Dra. Afrida</p>
+			<div style="margin-top:  20px; font-size: 3em;">&amp;</div>
+		</div>
+		<div class="brides-group">
+			<p class="bride-names">Akhmad Fauzi</p>
+			
+			<p class="bride-parents" style="font-weight: bold; font-size: 1em">Anak ke tiga dari Bpk. Ribin &amp; Ibu Kurnia</p>
+		</div>
+		<div style="margin-top: 50px;"><p style="font-size: 1.3em; width: 100%;font-weight: bold;">Yang Insha Allah dilaksanakan pada :</p></div>
+		<div class="detail-container">
+			<div class="detail">
+				<div class="date-big-screen" style="font-size: 1.5em; font-weight: bold; margin-bottom: 0;">Sabtu</div>
+				<div class="date-big-screen" style="font-size: 3.5em; font-weight: bold; line-height: 50px;">30</div>
+				<div class="date-big-screen" style="font-size: 1.5em; font-weight: bold; letter-spacing: 4px;">Juni</div>
+				<div class="date-big-screen" style="font-size: 1.5em; font-weight: bold; letter-spacing: 2px;">2018</div>
+				<div class="date-mobile-only"> Sabtu 30 Juni 2018</div>
+			</div>
+			<div class="detail" style="font-weight: bold">
+				
+				<p>Bertempat di Villa Basofi Sudirman</p>
+				<p>Jl. Pondok Ranggon Barat No 11 Rt 03/RW 02</p>
+				<p>Kelurahan Pondok Ranggon, Kecamatan Cipayung</p>
+				<p>Jakarta Timur</p>
+			</div>
+			<div class="detail">
+				<div class="time-big-screen" style="display:block; width: 100%; font-size: 2em; font-weight: bold;">Akad Nikah</div>
+				<div class="time-big-screen" style="display:block; width: 100%; font-size: 1.5em; font-weight: bold;">09.00 - Selesai</div>
+				<div class="time-big-screen" style="display:block; width: 100%; font-size: 2em; font-weight: bold;">Resepsi</div>
+				<div class="time-big-screen" style="display:block; width: 100%; font-size: 1.5em; font-weight: bold;">13.00 - 16.00</div>
+				<div class="time-mobile-only">Akad Nikah : 09.00 - selesai</div>
+				<div class="time-mobile-only">Resepsi : 13.00 - 16.00</div>
+
+			</div>
+		</div>
+		<p style="clear: both; font-weight: bold;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila bapak/ibu,saudara/i berkenan hadir untuk memberikan do'a restu kepada kedua mempelai</p>
+	</section>
+	<section class="section wedding-location" id="Location">
+		<p>Location</p>
+		 <div id="map"></div>
+	</section>
+	<section class="section wedding-thanks">Terima kasih untuk kehadirannya</section>
+	<div class="button-container">
+		<a href="#" class="main-button" id="MainButton"><span>&nbsp;</span></a>
+		<a href="#Home" class="anchor cover-button"><i class="fa fa-home"></i></a>
+		<a href="#Detail" class="anchor detail-button"><i class="fa fa-heart"></i></a>
+		<a href="#Location" class="anchor location-button"><i class="fa fa-map-signs"></i></a>
+	</div>
+	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	 <script>
+	 	var isHomeClicked = true;
+
+	 	$("#MainButton").on("click", function(e){
+	 		e.preventDefault();
+	 		if (isHomeClicked) {
+	 			isHomeClicked = false;
+	 			setTimeout(function(e){
+	 				$(".cover-button").animate({
+			 			"top":"-100px",
+						"right":"40px"	
+			 		},200);
+			 		$(".detail-button").animate({
+			 			"top":"-75px",
+						"right":"110px",
+			 		},200);
+			 		$(".location-button").animate({
+			 			"top":"-5px",
+						"right":"130px"
+			 		},200);
+	 			},100);
+	 		}else{
+	 			isHomeClicked = true;
+	 			setTimeout(function(e){
+	 			$(".cover-button").animate({
+		 			"top":"-5px",
+					"right":"35px"	
+		 		},200);
+		 		$(".detail-button").animate({
+		 			"top":"-5px",
+					"right":"35px"	
+		 		},200);
+		 		$(".location-button").animate({
+		 			"top":"-5px",
+					"right":"35px"	
+		 		},200);
+		 	},100);
+	 		}
+	 	});
+
+	 	document.querySelectorAll('.anchor').forEach(anchor => {
+		    anchor.addEventListener('click', function (e) {
+		        e.preventDefault();
+
+		        document.querySelector(this.getAttribute('href')).scrollIntoView({
+		            behavior: 'smooth'
+		        });
+		    });
+		});
+
+	      function initMap() {
+	        var basofi = {lat: -6.1631459, lng: 107.0468049};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 18,
+	          center: basofi
+	        });
+	        var marker = new google.maps.Marker({
+	          position: basofi,
+	          map: map,
+			  icon: "http://atika.dan.akhmadfauzi.com/img/icon.png"
+
+	        });
+
+	         marker.addListener('click', goToMaps);
+
+	      }
+	 		function goToMaps(){
+	 			 window.open("https://www.google.com/maps/search/?api=1&query=-6.1631459,107.0468049",'_blank');
+	 		}
+	 		/*window.scroll({
+			  top: window.innerHeight, 
+			  left: 0, 
+			  behavior: 'smooth' 
+			});*/
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSAUZiau51JMITBq181WWNBWgNe_zTBZU&amp;callback=initMap">
+	    </script>
+</body>
+</html>

@@ -28,6 +28,14 @@ path{
 	animation: animate 1.5s cubic-bezier(0, 0.23, 1, .1);
 }
 
+.wedding-details {
+		/*background-color: black !important;
+		color: white;*/
+		background-image:  url('images/bg.jpg');
+		/* background-image: linear-gradient(#F38BD3, #FE7880); */
+	}
+
+
 @keyframes animate {
 	0% {
 		opacity: 0;
@@ -552,6 +560,7 @@ width: 100%;
 		overflow: hidden;
 		height: 500px;
 	 }
+
 	
 
 }

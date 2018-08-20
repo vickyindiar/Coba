@@ -179,13 +179,13 @@
 		<p style="font-weight: bold;">Maha suci Allah yang telah menciptakan makhluknya berpasang-pasangan</p>
 		<p style="font-weight: bold;">Ya Allah perkenankanlah kami menikahkan putra putri kami</p>
 		<div class="brides-group" style="margin-top: 60px">
-			<p class="bride-names">Vicky Indiarto</p>
+			<p class="bride-names">Vicky Indiarto S.Kom</p>
 			
 			<p class="bride-parents" style="font-weight: bold; font-size: 1em">Putra kedua dari Bpk. H. Nali Anwar &amp; Ibu Hj. Siti Hikmah</p>
 			<div style="margin-top:  20px; font-size: 3em;">&amp;</div>
 		</div>
 		<div class="brides-group">
-			<p class="bride-names">Erni Alviani</p>
+			<p class="bride-names">Erni Alviani S.Pd</p>
 			
 			<p class="bride-parents" style="font-weight: bold; font-size: 1em"> Putri Pertama dari Bpk. Giyanto (Alm.) &amp; Ibu Sutarni</p>
 		</div>
@@ -275,6 +275,13 @@
 		 	},100);
 	 		}
 	 	});
+		 
+
+		 $("#Location").on("click", function(){
+			ShowTheToast();
+
+
+		 });
 
 	 	document.querySelectorAll('.anchor').forEach(anchor => {
 		    anchor.addEventListener('click', function (e) {
@@ -295,8 +302,8 @@
 	        var marker = new google.maps.Marker({
 	          position: basofi,
 	          map: map,
-			icon: "images/lokasi.png"
-			//icon : "https://freeiconshop.com/wp-content/uploads/edd/location-marker-outline-filled.png"
+			  icon: "images/lokasi.png"
+
 	        });
 
 	         marker.addListener('click', goToMaps);
@@ -311,9 +318,15 @@
 			  behavior: 'smooth' 
 			});*/
 		
+			function ShowTheToast() {
+				var toastHTML = '<span>Open In Google Maps</span><button class="btn-flat toast-action"  onclick="javascript: goToMaps()">Click</button>';
+  			    M.toast({html: toastHTML, completeCallback: function(){ showToast = false;}});
+			}
+			var showToast = false;
 			$(window).scroll(function() {
 				var scroll = $(window).scrollTop();
-				if (scroll == 1) { 
+				console.log(scroll);
+				if (scroll == 1 || scroll == 2) { 
 					var el     = $(".svg-vicky-warpper"),  
 						newone = el.clone(true);
 					el.before(newone);
@@ -322,7 +335,13 @@
 						newone = el.clone(true);
 					el.before(newone);
 					$("." + el.attr("class") + ":last").remove();
-			} 
+				}
+				else if(scroll >= 1600 && scroll <= 2200 ){
+					if(!showToast){
+						ShowTheToast();
+						showToast = true;
+					}
+				} 
 
 			});
 		</script>

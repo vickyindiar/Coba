@@ -295,11 +295,11 @@
 	        var marker = new google.maps.Marker({
 	          position: basofi,
 	          map: map,
-			 // icon: "http://atika.dan.akhmadfauzi.com/img/icon.png"
+			  icon: "images/lokasi.jpg"
 
 	        });
 
-	         $("#map").addListener('click', goToMaps);
+	         marker.addListener('click', goToMaps);
 
 	      }
 	 		function goToMaps(){
